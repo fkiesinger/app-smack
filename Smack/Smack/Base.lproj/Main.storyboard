@@ -105,7 +105,7 @@
                                 <rect key="frame" x="281" y="83" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="T1r-28-51b">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="T1r-28-51b" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="4gz-8U-SN9"/>
@@ -168,6 +168,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="pPD-EZ-6SH" id="bAr-s7-c6t"/>
+                        <outlet property="userImg" destination="T1r-28-51b" id="foj-re-D14"/>
                         <segue destination="US0-Yt-EeZ" kind="show" identifier="toLogin" id="ZNs-3n-kOU"/>
                     </connections>
                 </viewController>
@@ -354,7 +355,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpJ-E8-YOu">
                                         <rect key="frame" x="0.0" y="33" width="250" height="2"/>
@@ -371,7 +372,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xnD-WA-XP9">
                                         <rect key="frame" x="0.0" y="81" width="250" height="2"/>
@@ -388,7 +389,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVe-KH-g3B">
                                         <rect key="frame" x="0.0" y="129" width="250" height="2"/>
@@ -414,7 +415,7 @@
                                     <action selector="pickAvatarPressed:" destination="Hnq-2w-YjL" eventType="touchUpInside" id="Lwu-JX-xpS"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Hf4-an-tq3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Hf4-an-tq3" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="294" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="XpC-QK-Onm"/>
@@ -436,9 +437,14 @@
                                     <action selector="pickBgColorPressed:" destination="Hnq-2w-YjL" eventType="touchUpInside" id="BG9-Nk-0Pn"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Kbh-PS-fx9">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Kbh-PS-fx9" firstAttribute="centerX" secondItem="Vax-dx-63d" secondAttribute="centerX" id="079-q3-mg1"/>
                             <constraint firstItem="tpQ-Nv-Rm5" firstAttribute="centerX" secondItem="Vax-dx-63d" secondAttribute="centerX" id="4Ho-Zz-h7i"/>
                             <constraint firstItem="Hf4-an-tq3" firstAttribute="centerX" secondItem="Vax-dx-63d" secondAttribute="centerX" id="6WC-yB-L0p"/>
                             <constraint firstItem="mIG-qQ-UB3" firstAttribute="bottom" secondItem="tpQ-Nv-Rm5" secondAttribute="bottom" constant="20" id="BUk-yp-clh"/>
@@ -448,6 +454,7 @@
                             <constraint firstItem="mIG-qQ-UB3" firstAttribute="trailing" secondItem="t2c-Cw-cFF" secondAttribute="trailing" constant="16" id="TQC-3B-bEO"/>
                             <constraint firstItem="xuR-hw-Gcf" firstAttribute="width" secondItem="Hf4-an-tq3" secondAttribute="width" id="U5f-eW-ZxZ"/>
                             <constraint firstItem="Hf4-an-tq3" firstAttribute="top" secondItem="han-CG-69b" secondAttribute="bottom" constant="40" id="W94-G0-dB8"/>
+                            <constraint firstItem="Kbh-PS-fx9" firstAttribute="centerY" secondItem="Vax-dx-63d" secondAttribute="centerY" constant="-100" id="X1d-4O-wHi"/>
                             <constraint firstItem="xuR-hw-Gcf" firstAttribute="centerX" secondItem="Vax-dx-63d" secondAttribute="centerX" id="Yno-6m-IYA"/>
                             <constraint firstItem="t2c-Cw-cFF" firstAttribute="top" secondItem="mIG-qQ-UB3" secondAttribute="top" constant="8" id="f67-5k-GTx"/>
                             <constraint firstItem="xR7-cW-QFM" firstAttribute="centerX" secondItem="Vax-dx-63d" secondAttribute="centerX" id="gHv-jZ-N8x"/>
@@ -460,6 +467,7 @@
                     <connections>
                         <outlet property="emailTxt" destination="D2X-Oe-oYc" id="VTU-1U-YTc"/>
                         <outlet property="passTxt" destination="21t-ge-ssc" id="1CL-i6-URG"/>
+                        <outlet property="spinner" destination="Kbh-PS-fx9" id="m8X-Hq-iw8"/>
                         <outlet property="userImage" destination="Hf4-an-tq3" id="YEr-VR-ngx"/>
                         <outlet property="usernameTxt" destination="ZMi-ru-zoX" id="BXE-1r-DBf"/>
                         <segue destination="P5a-6O-fJp" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="R4y-7E-AAc"/>
