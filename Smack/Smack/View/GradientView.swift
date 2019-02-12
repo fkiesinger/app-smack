@@ -23,12 +23,42 @@ class GradientView: UIView {
         }
     }
     
+    @IBInspectable var x1: CGFloat = 0 {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
+    @IBInspectable var y1: CGFloat = 0 {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
+    
+    @IBInspectable var x2: CGFloat = 1 {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
+    
+    @IBInspectable var y2: CGFloat = 1 {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
+    
+    @IBInspectable var point: NSNumber = 0.0 {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
+    
     override func layoutSubviews() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.startPoint = CGPoint(x: x1, y:y1)
+        gradientLayer.endPoint = CGPoint(x: x2, y: y2)
         gradientLayer.frame = self.bounds
+        gradientLayer.locations = [point]
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
