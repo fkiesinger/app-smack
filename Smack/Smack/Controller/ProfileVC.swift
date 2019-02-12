@@ -13,7 +13,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var userEmail: UILabel!
-    @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var bgView: GradientView!
     
     
     override func viewDidLoad() {

@@ -51,7 +51,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6l-RQ-u2t">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6l-RQ-u2t" customClass="RoundedView" customModule="Smack" customModuleProvider="target">
                     <rect key="frame" x="20" y="153.5" width="335" height="360"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRb-ua-YXg">
@@ -115,6 +115,11 @@
                         <constraint firstAttribute="bottom" secondItem="1kS-DN-eW4" secondAttribute="bottom" constant="8" id="gCG-aK-mUw"/>
                         <constraint firstAttribute="trailing" secondItem="IRb-ua-YXg" secondAttribute="trailing" constant="8" id="rp6-cF-tH1"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
