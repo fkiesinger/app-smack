@@ -29,7 +29,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="topColor">
-                            <color key="value" white="0.0" alpha="0.35118792808219168" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="value" white="0.0" alpha="0.35118792809999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
                             <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,8 +46,8 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="y2">
                             <real key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="point">
-                            <real key="value" value="0.65000000000000002"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="start">
+                            <real key="value" value="0.69999999999999996"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>

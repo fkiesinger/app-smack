@@ -45,7 +45,7 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="y2">
                             <real key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="point">
+                        <userDefinedRuntimeAttribute type="number" keyPath="start">
                             <real key="value" value="0.69999999999999996"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>

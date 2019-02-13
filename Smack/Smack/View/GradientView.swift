@@ -46,7 +46,7 @@ class GradientView: UIView {
         }
     }
     
-    @IBInspectable var point: CGFloat = 0.0 {
+    @IBInspectable var start: CGFloat = 0.0 {
         didSet {
             self.setNeedsLayout()
         }
@@ -58,7 +58,7 @@ class GradientView: UIView {
         gradientLayer.startPoint = CGPoint(x: x1, y:y1)
         gradientLayer.endPoint = CGPoint(x: x2, y: y2)
         gradientLayer.frame = self.bounds
-        gradientLayer.locations = [point as NSNumber]
+        gradientLayer.locations = [start as NSNumber]
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
